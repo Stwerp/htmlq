@@ -18,7 +18,7 @@ would like to start a new survey.
 
 $filePath = "../OUTPUT/survey_results.csv";
 
-createDir("../OUTPUT/"); // create director if it doesn't exist yet
+createDir("../OUTPUT/"); // create directory if it doesn't exist yet
 
 $csvFile = fopen($filePath, "a") or die("Unable to open file!");
 
