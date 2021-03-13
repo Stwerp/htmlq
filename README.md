@@ -61,6 +61,19 @@ HtmlQ introduces a few new settings that were not available in FlashQ:
     <item id="leaveSiteWarning">Your answers will be lost.</item>
 ```
 
+### CSV Export
+
+If your webspace supports [PHP](https://www.php.net/) then you can config HtmlQ to write all results into a CSV file. You will find the CSV file in the folder with the name `OUTPUT`. Delete the file to start a new survey.
+
+`settings/config.xml`:
+
+```xml
+    <!-- URL for data transmission via POST/GET (leave blank if not required) -->
+    <item id="submitUrl">src/save_as_csv.php</item>
+    <!-- request mode (post|get) -->
+    <item id="submitUrlMethod">get</item>
+```
+
 ## Creating unique participation links (UID)
 
 If you want to send out unique links to a HtmlQ survey that will automatically fill in the UID/user code, you can create links in the following format: [https://www.yourdomain.com/htmlq/#/?userCode=USERCODE](). In the resulting CSV file, the user code will show up in the UID field. This allows you to identify participants without requiring them to log in.
