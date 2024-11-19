@@ -63,7 +63,7 @@ for ($x = 0; $x <= 10000; $x++) {
 // Adding headers  
 if (filesize($filePath) == 0) {
     
-    $headers = array("uuid", "name", "datetime", "nneg", "nneu", "npos", "sort");
+    $headers = array("uuid", "uid", "name", "datetime", "nneg", "nneu", "npos", "sort");
     $headers = array_merge($headers, $commentHeaders, $formHeaders, $durationHeaders);
     fputcsv($csvFile, $headers);
 }
@@ -71,7 +71,8 @@ if (filesize($filePath) == 0) {
 // Create Data Arrays
 $data = array_merge(array(
     uniqid(), // generate random UUID
-    htmlspecialchars($_GET["name"]), 
+    htmlspecialchars($_GET["uid"]),
+    htmlspecialchars($_GET["name"]),
     htmlspecialchars($_GET["datetime"]), 
     htmlspecialchars($_GET["nneg"]), 
     htmlspecialchars($_GET["nneu"]), 
