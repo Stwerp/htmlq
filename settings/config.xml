@@ -70,9 +70,9 @@
   </item>
 
   <!-- URL for data transmission via POST/GET (leave blank if not required) -->
-  <item id="submitUrl">exe.php?do=save</item>
+  <item id="submitUrl">src/save_as_csv.php</item>
   <!-- request mode (post|get) -->
-  <item id="submitUrlMethod">post</item>
+  <item id="submitUrlMethod">get</item>
 
   <!-- data transmission via email, user must have an e-mail programm like Outlook (leave blank if not required) -->
   <item id="submitMail">yourdomain.com</item>
