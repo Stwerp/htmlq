@@ -267,7 +267,7 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
     $scope.duration = Duration;
 
     var longestColumn = _.last(_.sortBy(map.column, function(column){ return parseInt(column.__text, 10); }));
-    $scope.cellHeight = 300 / parseInt(longestColumn.__text, 10);
+    $scope.cellHeight = config.CELLHEIGHT / parseInt(longestColumn.__text, 10);
 
     $scope.textAlignRight = (config.textAlign === 'right');
 
