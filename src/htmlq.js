@@ -487,7 +487,11 @@ angular.module('app', ['ui.router', 'ui.bootstrap'])
             } else if (formElement.inputType.indexOf('rating') === 0) {
                 return formElement.value.join('|');
             } else {
-                return formElement.value;
+                if (formElement.value) {
+                    return formElement.value;
+                } else {
+                    return '';
+                }
             }
         }
     };
