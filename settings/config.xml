@@ -39,9 +39,10 @@
 
   <!-- HtmlQ only: disable the in-window back button -->
   <item id="disableBackButton">true</item>
-  <item id="smallFont">true</item>
+  <item id="smallFont">false</item>
   <item id="GRIDWIDTH">960</item>
-  <item id="CELLHEIGHT">900</item>
+  <item id="CELLHEIGHT">500</item>
+
 
   <!-- define form elements for step5; only displayed if showStep5 is true (delete tags if not required) -->
   <!-- add label: <label>[STRING]</label> -->
