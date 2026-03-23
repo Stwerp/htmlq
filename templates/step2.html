@@ -4,18 +4,18 @@
             <div class="grid">
                 <table>
                     <tr class="grid-heading">
-                        <td style="width: {config.GRIDWIDTH px};" colspan="{{ map.column.length }}">
+                        <td style="width: {config.GRIDWIDTH px};" colspan="{{ map.column.length }}" class="smaller">
                             <span style="float: left;" ng-bind-html="language.btnDisagreement"></span>
                             <span style="float: right; text-align: right;" ng-bind-html="language.btnAgreement"></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-xs-1 rating" ng-repeat="col in map.column" ng-style="{'background-color': '#' + col._colour, width: config.GRIDWIDTH/map.column.length}">
-                            <b>{{ col._id }}</b>
+                            <b class="smaller">{{ col._id }}</b>
                         </td>
                     </tr>
                     <tr>
-                        <td class="col-xs-1" ng-repeat="col in sortedStatements.grid" ng-style="{width: config.GRIDWIDTH/map.column.length}">
+                        <td class="col-xs-1 smaller" ng-repeat="col in sortedStatements.grid" ng-style="{width: config.GRIDWIDTH/map.column.length}">
                             <div small-font="config.smallFont" swappable-droppable="cell" on-received-statement-from-categories="removeStatement($statement)" dynamically-create-initial-statement="true" ng-repeat="cell in col" class="cell" helper-width="{{ config.GRIDWIDTH/map.column.length }}" ng-style="{height: cellHeight}" ng-class="{'small-font': (config.smallFont === 'true')}">
                             </div>
                         </td>
@@ -28,19 +28,19 @@
             <div ng-show="!done()">
                 <div class="col-xs-4">
                     <p class="heading" ng-bind-html="language.btnDisagreement"></p>
-                    <ul class="sortable disagree">
+                    <ul class="sortable disagree smaller">
                         <li class="draggable" clone-on-drag="true" draggable-statement="statement" ng-repeat="statement in sortedStatements.disagree" helper-width="{{ config.GRIDWIDTH/map.column.length }}" small-font="config.smallFont" ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
                     </ul>
                 </div>
                 <div class="col-xs-4">
                     <p class="heading" ng-bind-html="language.btnNeutral"></p>
-                    <ul class="sortable neutral">
+                    <ul class="sortable neutral smaller">
                         <li class="draggable" clone-on-drag="true" draggable-statement="statement" ng-repeat="statement in sortedStatements.neutral" helper-width="{{ config.GRIDWIDTH/map.column.length }}" small-font="config.smallFont" ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
                     </ul>
                 </div>
                 <div class="col-xs-4">
                     <p class="heading" ng-bind-html="language.btnAgreement"></p>
-                    <ul class="sortable agree">
+                    <ul class="sortable agree smaller">
                         <li class="draggable" clone-on-drag="true" draggable-statement="statement" ng-repeat="statement in sortedStatements.agree" helper-width="{{ config.GRIDWIDTH/map.column.length }}" small-font="config.smallFont" ng-class="{neutral: statement.category === 'neutral', agree: statement.category === 'agree', disagree: statement.category === 'disagree', textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
                     </ul>
                 </div>
