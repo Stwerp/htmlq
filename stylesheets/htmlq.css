@@ -191,6 +191,17 @@ div.disagree, li.disagree {
     margin-bottom: 20px;
 }
 
+/* Force the Step 1 sortable boxes to be 500px tall */
+#step1 .sorted-statements .sortable {
+    height: 500px;
+}
+
+/* Force the draggable cards in Step 1 to have a smaller font */
+#step1 .draggable {
+    font-size: 1.2em; /* The default is 1.5em, so 1.2em makes it nicely smaller */
+    /* Alternatively, you can use font-size: 80% !important; */
+}
+
 .sorted-statements .next-button {
     padding-top: 50px;
     padding-bottom: 50px;

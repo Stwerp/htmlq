@@ -9,7 +9,7 @@
             <tr>
                 <td style="padding: 15px; vertical-align: top;">
                     <p class="heading"><span ng-bind-html="language.btnDisagreement"></span> (#1)</p>
-                    <div droppable droppable-model="sortedStatements.disagree" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="disagree" class="sortable disagree">
+                    <div droppable droppable-model="sortedStatements.disagree" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="disagree" class="sortable disagree smaller">
                         <div class="overlay"></div>
                         <ul>
                             <li ng-repeat="statement in sortedStatements.disagree" class="draggable" draggable-statement-first="statement" ng-class="{textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
@@ -18,7 +18,7 @@
                 </td>
                 <td style="padding: 15px; vertical-align: top;">
                     <p class="heading"><span ng-bind-html="language.btnNeutral"></span> (#2)</p>
-                    <div droppable droppable-model="sortedStatements.neutral" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="neutral" class="sortable neutral">
+                    <div droppable droppable-model="sortedStatements.neutral" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="neutral" class="sortable neutral smaller">
                         <div class="overlay"></div>
                         <ul>
                             <li ng-repeat="statement in sortedStatements.neutral" class="draggable" draggable-statement-first="statement" ng-class="{textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
@@ -27,7 +27,7 @@
                 </td>
                 <td style="padding: 15px; vertical-align: top;">
                     <p class="heading"><span ng-bind-html="language.btnAgreement"></span> (#3)</p>
-                    <div droppable droppable-model="sortedStatements.agree" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="agree" class="sortable agree">
+                    <div droppable droppable-model="sortedStatements.agree" on-droppable-receive="removeFromSortedStatements($statement)" after-drop="afterDrop($statement, $category)" droppable-category="agree" class="sortable agree smaller">
                         <div class="overlay"></div>
                         <ul>
                             <li ng-repeat="statement in sortedStatements.agree" class="draggable" draggable-statement-first="statement" ng-class="{textright: textAlignRight}"><b>({{ statement._id }})</b> <span ng-bind-html="statement.__text"></span></li>
