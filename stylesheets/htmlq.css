@@ -193,7 +193,7 @@ div.disagree, li.disagree {
 
 /* Force the Step 1 sortable boxes to be 500px tall */
 #step1 .sorted-statements .sortable {
-    height: 500px;
+    height: 300px;
 }
 
 /* Force the draggable cards in Step 1 to have a smaller font */
@@ -205,6 +205,26 @@ div.disagree, li.disagree {
 .sorted-statements .next-button {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+#step2 .sortable .draggable,
+.dragging-onto-grid {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#step2 .cell,
+#step2 .cell * {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+/* 4. STOP the inner wrappers inside the grid from compounding/multiplying the size */
+#step2 .cell .swappable > div,
+#step2 .cell .swappable .draggable,
+#step2 .cell .draggable-small {
+    font-size: 1em; /* Forces it to just inherit the exact size of its parent */
+    line-height: 1.2em; /* Keeps the text lines nicely spaced */
 }
 
 #step4 div.comment-heading {
